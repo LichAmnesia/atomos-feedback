@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / how-to / workflow help
+    url: https://github.com/LichAmnesia/atomos-feedback/discussions/categories/q-a
+    about: Open a Q&A discussion — easier to thread than an issue.
+  - name: Show off your vault setup
+    url: https://github.com/LichAmnesia/atomos-feedback/discussions/categories/show-and-tell
+    about: Share screenshots, workflows, plugin ideas in Show & tell.
+  - name: General chat / brainstorm
+    url: https://github.com/LichAmnesia/atomos-feedback/discussions/categories/general
+    about: Anything else — scope, roadmap thinking, philosophy, half-formed ideas.
+  - name: Security issue
+    url: mailto:me@alwa.info
+    about: Email instead of opening a public issue.

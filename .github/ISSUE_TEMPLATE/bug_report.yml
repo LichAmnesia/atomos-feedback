@@ -1,0 +1,77 @@
+name: Bug report
+description: Something in atomos broke or behaves wrong.
+title: "[bug] "
+labels: ["type: bug", "status: under-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a bug. The more reproducible the report,
+        the faster the fix. **Don't paste private vault content** — a 3-file repro
+        is plenty.
+
+  - type: input
+    id: atomos-version
+    attributes:
+      label: atomos version
+      description: Settings → About, or the app title bar (e.g. `0.6.2`).
+      placeholder: "0.6.2"
+    validations:
+      required: true
+
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      description: From `About This Mac` (e.g. `14.4 (Sonoma)`).
+      placeholder: "14.4 (Sonoma)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac chip
+      options:
+        - Apple Silicon (M1/M2/M3/M4)
+        - Intel
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what actually happened?
+      placeholder: |
+        1. Open vault X
+        2. Click Y
+        3. Expected Z, got W
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal repro (optional)
+      description: |
+        A few lines of markdown / a small vault snippet that triggers it.
+        Drag-drop files here if helpful — but don't attach your real vault.
+      render: markdown
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console logs (optional)
+      description: |
+        If it's a crash or hang: open `Console.app`, search `atomos`, copy
+        relevant lines. Backticks-wrap long output.
+      render: shell
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/LichAmnesia/atomos-feedback/issues?q=is%3Aissue) before filing.
+          required: true

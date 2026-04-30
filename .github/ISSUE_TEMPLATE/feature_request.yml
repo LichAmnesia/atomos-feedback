@@ -1,0 +1,54 @@
+name: Feature request
+description: Suggest something atomos should do.
+title: "[feature] "
+labels: ["type: feature", "status: under-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One feature per issue, please — it makes upvoting and triage tractable.
+        If you already see a similar request, **👍 it** instead of duplicating.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the problem?
+      description: What are you trying to do that atomos doesn't currently support, or makes harder than it should?
+      placeholder: |
+        When I do X, atomos forces me to Y. I'd rather…
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like atomos to do?
+      description: Concrete behavior — UI, shortcut, setting, etc. Half-baked is fine; just be specific.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you're doing today (optional)
+      description: Workarounds — how you cope without this feature. Helps gauge priority.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Roughly how big does this feel?
+      options:
+        - Small tweak (a setting, a shortcut, a label)
+        - Medium (new panel, new command, a small surface)
+        - Large (new subsystem, plugin, sync, multi-window)
+        - Not sure
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Pre-flight
+      options:
+        - label: I searched [existing issues](https://github.com/LichAmnesia/atomos-feedback/issues?q=is%3Aissue) and didn't find this request.
+          required: true
